@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="customBean" class="club.vann.spring.postprocessor.CustomBean" init-method="initMethod">
+			<property name="id" value="123"></property>
+			<property name="name" value="王五"></property>
+		</bean>
+
+		<bean id="customBeanFactoryPostProcessor" class="club.vann.spring.postprocessor.CustomBeanFactoryPostProcessor"></bean>
+		<bean id="customBeanPostProcessor" class="club.vann.spring.postprocessor.CustomBeanPostProcessor"></bean>
+</beans>

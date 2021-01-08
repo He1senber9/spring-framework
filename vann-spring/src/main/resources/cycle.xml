@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="customBeanA" class="club.vann.spring.cycle.CustomBeanA">
+		<property name="id" value="123"></property>
+		<property name="name" value="张三"></property>
+		<property name="customBeanB" ref="customBeanB"></property>
+	</bean>
+
+	<bean id="customBeanB" class="club.vann.spring.cycle.CustomBeanB" scope="prototype">
+		<property name="id" value="123"></property>
+		<property name="name" value="李四"></property>
+		<property name="customBeanA" ref="customBeanA"></property>
+	</bean>
+
+</beans>
